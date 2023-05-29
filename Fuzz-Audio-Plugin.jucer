@@ -2,7 +2,8 @@
 
 <JUCERPROJECT id="BlIKz0" name="Fuzz-Audio-Plugin" projectType="audioplug"
               useAppConfig="0" addUsingNamespaceToJuceHeader="0" displaySplashScreen="1"
-              jucerFormatVersion="1" pluginCharacteristicsValue="pluginWantsMidiIn">
+              jucerFormatVersion="1" pluginCharacteristicsValue="pluginWantsMidiIn"
+              cppLanguageStandard="latest" version="1.0.0">
   <MAINGROUP id="vATVW9" name="Fuzz-Audio-Plugin">
     <GROUP id="{0C7E85FE-A5DE-9DAE-79C8-54A2B27DB5B0}" name="Source">
       <FILE id="WpZOHk" name="PluginProcessor.cpp" compile="1" resource="0"
@@ -18,8 +19,10 @@
   <EXPORTFORMATS>
     <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug" targetName="Fuzz-Audio-Plugin"/>
-        <CONFIGURATION isDebug="0" name="Release" targetName="Fuzz-Audio-Plugin"/>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="Fuzz-Audio-Plugin" vst3BinaryLocation="$(HOME)/Apps/.vst3"
+                       linuxArchitecture="-m64"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="Fuzz-Audio-Plugin" vst3BinaryLocation="$(HOME)/Apps/.vst3"
+                       linuxArchitecture="-m64"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_audio_basics" path="../../../Apps/JUCE/modules"/>
